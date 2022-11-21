@@ -1,6 +1,8 @@
 ﻿class Program
 {
     public static PersonList personlist;
+    public static FlightList flightlist;
+
     public static void Main(string[] args)
     {
         PreparePersonListWhenProgramIsLoad();
@@ -75,10 +77,68 @@
         Console.Clear();
         Console.WriteLine("Write < exit > for out");
         string id = InputID();
-        PrintMenu();
+        string Password = InputPassword();
+        Console.WriteLine("Are you admin?(Y/N)");
+        string admin = Console.ReadLine();
+        if(admin == "Y")
+        {
+            ShowInsideLoginForAdmin();
+        }
+        else if (admin == "N")
+        {
+            ShowInsideLoginForUser();
+        }
+        ShowLogin();
+    }
+    public static void ShowInsideLoginForAdmin()
+    {
+        string price = InputPrice();
+        string country = InputCountry();
+        string time = InputTime();
+        Flight flight = new Flight(price,country,time);
+
+        Program.flightlist.AddNewFlight(flight);
 
     }
+    public static void ShowInsideLoginForUser()
+    {
+        Console.Clear();
+        Console.WriteLine("1.Flight 1 ");
+        Console.WriteLine("2.Flight 2 ");
+        Console.WriteLine("3.Search ");
 
+        SelectMenuUser();
+        ShowInsideLoginForUser();
+    }
+    public static void SelectMenuUser()
+    {
+        Console.Write("Please select choice : ");
+        int choice = (int.Parse(Console.ReadLine()));
+        switch(choice)
+        {
+            case 1:
+                Console.WriteLine("Flight 1");
+                Console.ReadLine();
+                break;
+            case 2:
+                Console.WriteLine("Flight 2");
+                Console.ReadLine();
+                break;
+            //case 3:
+            //    SearchFlight();
+            //    break;
+            default:
+                break;
+        }
+    }
+    //public static void SearchFlight()
+    //{
+    //    string country = InputCountry();
+    //
+    //    Program.flightlist.FetchFlight(country);
+    //    Console.ReadLine();
+    //    ShowInsideLoginForUser();
+    //}
 
     public static void InputRegisterUser()
     {
@@ -184,5 +244,19 @@
         Console.Write("Number : ");
         return Console.ReadLine();
     }
-
+    public static string InputPrice()
+    {
+        Console.Write("Price : ");
+        return Console.ReadLine();
+    }
+    public static string InputCountry()
+    {
+        Console.Write("Country : ");
+        return Console.ReadLine();
+    }
+    public static string InputTime()
+    {
+        Console.Write("Time : ");
+        return Console.ReadLine();
+    }
 }

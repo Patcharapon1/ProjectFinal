@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Final_Project\\MDT211-Project\\Coding\\Coding.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Final1\\ProjectFinal\\Coding.csproj",
       "projectName": "Coding",
-      "projectPath": "C:\\Users\\User\\Desktop\\Final_Project\\MDT211-Project\\Coding\\Coding.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Final1\\ProjectFinal\\Coding.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Final_Project\\MDT211-Project\\Coding\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Final1\\ProjectFinal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
